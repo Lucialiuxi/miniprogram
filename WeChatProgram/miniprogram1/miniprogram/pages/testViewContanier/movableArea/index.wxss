@@ -1,0 +1,42 @@
+/* pages/testViewContanier/movableArea/index.wxss */
+page {
+    height: 100%;
+}
+.page-body {
+    height: 700px;
+}
+.container {
+    display: block;
+    height: 100%;
+}
+.page-section {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.page-section-title {
+    font-size: 14px;
+    color: grey;
+}
+wx-movable-area {
+    height: 200px;
+    width: 200px;
+    margin: 25px 0px 0 25px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+wx-movable-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background: #1AAD19;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn-area, .page-body-button {
+    width: 100% !important;
+    margin: 0 !important;
+    display: block;
+}

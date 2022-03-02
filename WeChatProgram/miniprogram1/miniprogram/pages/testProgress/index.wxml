@@ -1,0 +1,34 @@
+<!--pages/testProgress/index.wxml-->
+<view class="progress-box">
+    <progress  percent="25" show-info ></progress>
+</view>
+<!-- 动态变化的进度条 -->
+<view class="progress-box">
+    <progress
+        percent="{{percentValue}}"
+        show-info
+        active
+        active-mode="backward"
+    ></progress>
+</view>
+<view class="progress-box innerbar-changed">
+    <progress
+        percent="17"
+        border-radius="10" 
+        stroke-width="20"
+        show-info
+        active
+        active-mode="forwards"
+        backgroundColor="pink"
+        color="red"
+        bindactiveend="onProgressActiceEnd"
+    ></progress>
+    <text>{{shortString}}</text>
+</view>
+<!-- 环形进度条 -->
+<view class="canvasBox">
+    <view class="bigCircle"></view>
+    <view class="littleCircle">90%</view>
+    <canvas  canvas-id="runCanvas" id="runCanvas" class="canvas"></canvas>
+</view>
+

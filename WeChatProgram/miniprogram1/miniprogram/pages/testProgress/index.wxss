@@ -1,0 +1,37 @@
+/* pages/testProgress/index.wxss */
+.progress-box {
+    margin: 20px 10px;
+}
+.innerbar-changed .wx-progress-inner-bar {
+    border-radius: 10px;
+}
+.canvasBox {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-left: 50px;
+    position: relative;
+}
+.bigCircle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 200px;
+    background-color: #eee;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+.littleCircle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 160px;
+    width: 160px;
+    border-radius: 100px;
+    background-color: #fff;
+    line-height: 160px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(105, 103, 103);
+}

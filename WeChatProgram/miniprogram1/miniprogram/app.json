@@ -1,0 +1,41 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/getOpenId/index",
+        "pages/getMiniProgramCode/index",
+        "pages/deployService/index",
+        "pages/createCollection/index",
+        "pages/uploadFile/index",
+        "pages/selectRecord/index",
+        "pages/updateRecord/index",
+        "pages/updateRecordResult/index",
+        "pages/updateRecordSuccess/index",
+        "pages/sumRecord/index",
+        "pages/sumRecordResult/index",
+        "pages/testIcon/index",
+        "pages/testProgress/index",
+        "pages/richText/index",
+        "pages/testContainer/index",
+        "pages/testViewContanier/coverView/index",
+        "pages/testViewContanier/matchMedia/index",
+        "pages/testViewContanier/movableArea/index",
+        "pages/testViewContanier/scrollView/index",
+        "pages/testViewContanier/shareElement/index",
+        "pages/testViewContanier/swiper/index",
+        "pages/testViewContanier/view/index",
+        "components/listViewContainer/index",
+        "pages/testFormComponent/index",
+        "pages/testFormComponent/button/index",
+        "pages/testFormComponent/checkbox/index",
+        "pages/testFormComponent/checkboxGroup/index"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "小试身手",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+}

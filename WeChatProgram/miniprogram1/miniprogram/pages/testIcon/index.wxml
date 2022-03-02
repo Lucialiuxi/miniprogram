@@ -1,0 +1,20 @@
+<!--pages/testIcon/index.wxml-->
+<view class="container">
+   <view class="icon-box">
+        <icon class="icon-box-img" type="success" size="93"></icon>
+   </view>
+   <view class="icon-box">
+        <icon class="icon-box-img" type="success_no_circle" size="93px"></icon>
+   </view>
+   <view class="icon-box">
+        <icon class="icon-box-img" type="info" size="93rpx"></icon>
+   </view>
+   <view class="icon-box" style="background-color: gray;">
+        <text>查看文本：</text>
+        <icon class="icon-box-img" type="waiting" size="16" color="red"></icon>
+   </view>
+   <view class="icon-box">
+        <text>iconfont:</text>
+        <icon class="iconfont copyright" size="100"></icon>
+   </view>
+</view>

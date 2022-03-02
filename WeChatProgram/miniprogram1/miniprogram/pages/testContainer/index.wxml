@@ -1,0 +1,2 @@
+<!--pages/testContainer/index.wxml-->
+<list-view-container list="{{list}}" bindjump="jumpPage"/>

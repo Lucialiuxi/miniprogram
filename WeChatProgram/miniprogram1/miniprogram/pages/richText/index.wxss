@@ -1,0 +1,10 @@
+/* pages/richText/index.wxss */
+.page-section-title {
+    font-size: 20px;
+}
+.page-content {
+    font-size: 18px;
+}
+rich-text .p{
+    color: rgb(49, 131, 49);
+}

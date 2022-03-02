@@ -1,0 +1,25 @@
+/* components/listViewContainer/index.wxss */
+.view-container {
+    padding-top: 20px;
+}
+.view-container .component-wrap{
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+}
+.component-title {
+    background-color: lightpink;
+}
+.component-tip, .component-title {
+    display: inline;
+}
+.component-tip-hover {
+    color: blue;
+}
+.component-wrap-hover {
+    color: red;
+}
+.component-title-hover {
+    color: green;
+}

@@ -1,0 +1,12 @@
+<!--pages/testViewContanier/matchMedia/index.wxml-->
+<view>
+    <text>通过match-media 这个节点实现“页面宽高在某个范围才展示某个区域”这样的效果</text>
+    <match-media min-width="300" max-width="600">
+        <view>当页面宽度在300px到500px之间展示这里</view>
+    </match-media>
+    <!-- landscape横向 portrait纵向 -->
+    <!-- 设置横屏：在 app.json 的 window 段中设置 "pageOrientation": "landscape" ，或在页面 json 文件中配置 "pageOrientation": "landscape"  -->
+    <match-media orientation="landscape">
+        <view>当页面高度不小于400px切屏幕方向为横向时展示这里</view>
+    </match-media>
+</view>

@@ -1,0 +1,1 @@
+<view><text>404 页面未找到</text><navigator url="/pages/index/index">回到首页</navigator></view>

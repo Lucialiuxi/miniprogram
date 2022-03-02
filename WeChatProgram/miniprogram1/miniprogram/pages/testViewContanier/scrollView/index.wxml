@@ -1,0 +1,29 @@
+<!--pages/testViewContanier/scrollView/index.wxml-->
+<view class="container">
+    <view class="page-body">
+
+        <view class="page-section">
+            <view class="page-section-title">
+                <text>Vertical Scroll\n纵向滚动</text>
+            </view>
+            <view class="page-section-spacing">
+                <scroll-view 
+                    scroll-y="true" 
+                    style="height: 300rpx;" 
+                    bindscrolltoupper="upper" 
+                    bindscrolltolower="lower" 
+                    bindscroll="scroll" 
+                    scroll-into-view="{{toView}}" 
+                    scroll-top="{{scrollTop}}"
+                    scroll-with-animation
+                >
+                    <view class="scroll-view-item demo-text-1">A</view>
+                    <view class="scroll-view-item demo-text-2">B</view>
+                    <view class="scroll-view-item demo-text-3">C</view>
+                </scroll-view>
+            </view>
+        </view>
+
+    </view>
+</view>
+

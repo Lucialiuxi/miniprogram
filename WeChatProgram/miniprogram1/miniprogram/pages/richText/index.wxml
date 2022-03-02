@@ -1,0 +1,45 @@
+<!--pages/richText/index.wxml-->
+<page-container>
+    <text>
+        tip:
+            1.nodes不推荐使用String类型，性能会有所下降
+            2.rich-text组件内屏蔽所有节点的事件
+            3.attrs属性不支持id，支持class
+            3.name属性大小写不敏感
+            4.如果使用了不受信任的HTML节点，该节点及其所有的子节点将会被移除
+            5.img标签仅支持网络图片
+            6.如果在自定义组件中使用rich-text组件，那么自定义组件的wxss样式对rich-text中的class生效
+    </text>
+</page-container>
+
+<view class="container">
+    <view class="page-body">
+        <view class="page-section-title">通过HTML String渲染</view>
+        <view class="page-content">
+            <scroll-view 
+                scroll-y 
+                style="height: 100px;border: 1px solid green;padding: 5px;"
+                >
+                {{htmlSnip}}
+            </scroll-view>
+            <button type="primary" bindtap="renderHtml">渲染HTML</button>
+            <block wx:if="{{renderedByHtml}}">
+                <rich-text nodes="{{htmlSnip}}"></rich-text>
+            </block>
+
+            <view class="page-section-title">通过节点渲染</view>
+            <view class="page-content">
+                <scroll-view 
+                    scroll-y 
+                    style="height: 100px;border: 1px solid green;padding: 5px;"
+                    >
+                    {{nodeSnip}}
+                </scroll-view>
+                <button type="primary" bindtap="renderNode">渲染HTML</button>
+                <block wx:if="{{renderedByNode}}">
+                    <rich-text nodes="{{nodes}}"></rich-text>
+                </block>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,1 @@
+<view class="content"><text class="title">{{title}}</text><image class="logo" src="/static/logo.png"></image><view class="text-area"><view><navigator url="../../subpages/chat/chat">前往聊天</navigator></view></view></view>

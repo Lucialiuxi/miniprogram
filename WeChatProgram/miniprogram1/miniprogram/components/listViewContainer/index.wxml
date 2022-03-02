@@ -1,0 +1,14 @@
+<!--components/listViewContainer/index.wxml-->
+<view class="view-container" wx:if="{{list.length}}">
+    <view
+        wx:for="{{list}}"
+        wx:key="title"
+        class="component-wrap"
+        bindtap="jumpPage"
+        data-page="{{item.page}}"
+        hover-class="component-wrap-hover"
+    >
+        <view class="component-title" hover-class="component-title-hover" hover-stop-propagation> {{item.title}}_ </view>
+        <view class="component-tip" hover-class="component-tip-hover">{{item.tip}}</view>
+    </view>
+</view>
