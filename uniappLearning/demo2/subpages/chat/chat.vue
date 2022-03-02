@@ -4,6 +4,7 @@
 			class="chat-scroll-wrap" 
 			scroll-y enable-flex 
 			:style="{height: (windowHeight-84) + 'px'}"
+			:scroll-top="top"
 		>
 			<!-- 聊天列表 -->
 			<view class="chat-body">
@@ -37,7 +38,7 @@
 					@click="chooseImg"
 				></image>
 				<button type="primary" form-type="submit" class="send-button">发送</button>
-			<form>
+			</form>
 		</view>
 	</view>
 </template>
@@ -46,52 +47,87 @@
 	export default {
 		data() {
 			return {
+				top: 0,
 				windowHeight: 0,
 				chatList: [
-					{
-						name: '知心姐姐',
-						content: '你好，我是可爱的知心姐姐，请问你想聊点什么呢',
-						type: 'text',
-						avatar: '/static/zhixin.webp',
-						custom: false,
-						url: '',
-						id: '1',
-					},
-					{
-						name: '知心姐姐',
-						content: '',
-						type: 'img',
-						url: '/static/img1.doubanio.gif',
-						avatar: '/static/zhixin.webp',
-						custom: false,
-						id: '12',
-					},
-					{
-						name: '我',
-						content: '你好，我有个问题想咨询',
-						avatar: '/static/dongman.jpg',
-						type: 'text',
-						url: '',
-						custom: true,
-						id: '123',
-					},
 					// {
-					// 	name: '',
-					// 	content: '',
-					// 	type: '',
-					// 	url: '',
+					// 	name: '知心姐姐',
+					// 	content: '你好，我是可爱的知心姐姐，请问你想聊点什么呢',
+					// 	type: 'text',
+					// 	avatar: '/static/zhixin.webp',
 					// 	custom: false,
+					// 	url: '',
+					// 	id: '1',
+					// },
+					// {
+					// 	name: '知心姐姐',
+					// 	content: '',
+					// 	type: 'img',
+					// 	url: '/static/img1.doubanio.gif',
+					// 	avatar: '/static/zhixin.webp',
+					// 	custom: false,
+					// 	id: '12',
+					// },
+					// {
+					// 	name: '我',
+					// 	content: '你好，我有个问题想咨询',
+					// 	avatar: '/static/dongman.jpg',
+					// 	type: 'text',
+					// 	url: '',
+					// 	custom: true,
+					// 	id: '123',
 					// },
 				]
 			}
 		},
+		onShow: function() {
+			if (!!uni.getStorageSync('chat_list')) {
+				this.chatList = JSON.parse(uni.getStorageSync('chat_list'));
+				this.scrollUtil();
+			}
+		},
 		methods: {
+			scrollUtil(){
+				// 第二次开始不生效了
+				setTimeout(() => {
+					uni.pageScrollTo({
+						scrollTop: 999999999,
+						duration: 0,
+					});
+					this.top=999999999;
+				}, 500);
+			},
 			chooseImg(event) {
+				const _this = this;
 				uni.chooseImage({
-					count: 1,
+					count: 9,
 					sourceType: ['album'],
-					success(tempFilePaths, tempFiles){
-						console.log(tempFilePaths, tempFiles)
+					success: (tempFilePaths, tempFiles) => {
+						if (Array.isArray(tempFilePaths.tempFilePaths)) {
+							tempFilePaths.tempFilePaths.forEach((url) => {
+								const chatItem = {
+									name: '我',
+									content: '',
+									type: 'img',
+									url,
+									custom: true,
+									avatar: '/static/dongman.jpg',
+								};
+								
+								_this.chatList.push(chatItem);
+							});
+						}
+						const chatReply = {
+							name: '知心姐姐',
+							content: '收到',
+							type: 'text',
+							url: '',
+							custom: false,
+							avatar: '/static/zhixin.webp',
+						};
+						_this.chatList.push(chatReply);
+						this.scrollUtil();
+						uni.setStorageSync('chat_list', JSON.stringify(_this.chatList));
 					},
 				})
 			}

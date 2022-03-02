@@ -1,49 +1,48 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/notFound/notFound",
-        "pages/list/list",
-        "pages/mine/mine",
-        "pages/find/find"
-    ],
-    "subPackages": [
-        {
-            "root": "subpages",
-            "pages": [
-                "news/news",
-                "chat/chat"
-            ]
-        }
-    ],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8"
-    },
-    "tabBar": {
-        "color": "#333333",
-        "selectedColor": "#4CD964",
-        "backgroundColor": "#C0C0C0",
-        "list": [
-            {
-                "text": "聊天",
-                "pagePath": "pages/index/index"
-            },
-            {
-                "text": "我",
-                "pagePath": "pages/mine/mine"
-            },
-            {
-                "text": "通讯录",
-                "pagePath": "pages/list/list"
-            },
-            {
-                "text": "发现",
-                "pagePath": "pages/find/find"
-            }
-        ]
-    },
-    "usingComponents": {},
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/index/index",
+    "pages/notFound/notFound",
+    "pages/list/list",
+    "pages/mine/mine",
+    "pages/find/find"
+  ],
+  "subPackages": [
+    {
+      "root": "subpages",
+      "pages": [
+        "news/news",
+        "chat/chat"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#4CD964",
+    "backgroundColor": "#C0C0C0",
+    "list": [
+      {
+        "text": "聊天",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "我",
+        "pagePath": "pages/mine/mine"
+      },
+      {
+        "text": "通讯录",
+        "pagePath": "pages/list/list"
+      },
+      {
+        "text": "发现",
+        "pagePath": "pages/find/find"
+      }
+    ]
+  },
+  "usingComponents": {}
 }
